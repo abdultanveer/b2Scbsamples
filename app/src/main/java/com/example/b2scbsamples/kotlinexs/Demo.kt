@@ -6,19 +6,21 @@ import com.example.b2scbsamples.model.Dice
 class Demo {
 }
 
+
 fun main() {
-    val myFirstDice = Dice(6)
-    val rollResult = myFirstDice.roll()
-    val luckyNumber = 4
+    val numbers = listOf(1, 2, 3, 4, 5, 6)
+    println("List: $numbers")
+    println("Size: ${numbers.size}")
 
+    // Access elements of the list
+    println("First element: ${numbers[0]}")
+    println("Second element: ${numbers[1]}")
+    println("Last index: ${numbers.size - 1}")
+    println("Last element: ${numbers[numbers.size - 1]}")
+    println("First: ${numbers.first()}")
+    println("Last: ${numbers.last()}")
 
-
-    when (rollResult) {
-        luckyNumber -> println("You won!")
-        1 -> println("So sorry! You rolled a 1. Try again!")
-        2 -> println("Sadly, you rolled a 2. Try again!")
-        3 -> println("Unfortunately, you rolled a 3. Try again!")
-        5 -> println("Don't cry! You rolled a 5. Try again!")
-        6 -> println("Apologies! You rolled a 6. Try again!")
-    }
+    // Use the contains() method
+    println("Contains 4? ${numbers.contains(4)}")
+    println("Contains 7? ${numbers.contains(7)}")
 }
